@@ -65,9 +65,9 @@ inline bool maxx(T& a, const T& b) {
 /* ---------- CONSTANTS ---------- */
 const ll INF = (1LL << 62);
 const ll MOD = 1e9 + 7;
+
 /* ---------- MATH ---------- */
 ll gcd(ll a, ll b)  return std::gcd(a, b);
-
 ll lcm(ll a, ll b) {
     if(a == 0 || b == 0) return 0;
     return (a / gcd(a, b)) * b;
@@ -99,7 +99,6 @@ ll modpow(ll a, ll b, ll mod = MOD) {
 }
 /* ---------- SIEVE ---------- */
 vector<bool> isPrime;
-
 void sieve(int n) {
     if(n < 0) return;
 
@@ -118,18 +117,10 @@ void sieve(int n) {
 }
 
 /* ---------- BIT MANIPULATION ---------- */
-bool check_bit(ll n, int k) {
-    return (n >> k) & 1LL;
-}
-ll set_bit(ll n, int k) {
-    return n | (1LL << k);
-}
-ll unset_bit(ll n, int k) {
-    return n & ~(1LL << k);
-}
-ll toggle_bit(ll n, int k) {
-    return n ^ (1LL << k);
-}
+bool check_bit(ll n, int k) return (n >> k) & 1LL;
+ll set_bit(ll n, int k) return n | (1LL << k);
+ll unset_bit(ll n, int k) return n & ~(1LL << k);
+ll toggle_bit(ll n, int k) return n ^ (1LL << k);
 
 int popcnt(int x) return __builtin_popcount((unsigned int)x);
 int popcnt(ll x) return __builtin_popcountll((ull)x);
@@ -138,17 +129,15 @@ int popcnt(ll x) return __builtin_popcountll((ull)x);
 #define vecin(v,n) vector<ll> v(n); rep(i,n) cin >> v[i]
 #define vecout(v) for(auto &x : v) cout << x << ' '; nl;
 
-/* ---------- SOLVE ---------- */
 void solve() {
-
+    
 }
-
 signed main() {
     fastio;
-
     int _ = 1;
+    
     // cin >> _;
-
+    
     for(int i = 1; i <= _; i++) {
         // cout << "Case : " << i << ' ';
         solve();
