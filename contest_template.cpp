@@ -37,6 +37,7 @@ template<class T>
 inline bool maxx(T& a, const T& b) {
     return a < b ? a = b, 1 : 0;
 }
+
 /* ---------- FAST IO ---------- */
 #define fastio ios::sync_with_stdio(false); cin.tie(nullptr);
 
@@ -67,13 +68,13 @@ const ll INF = (1LL << 62);
 const ll MOD = 1e9 + 7;
 
 /* ---------- MATH ---------- */
-ll gcd(ll a, ll b)  return std::gcd(a, b);
+ll gcd(ll a, ll b)  {return std::gcd(a, b);}
 ll lcm(ll a, ll b) {
     if(a == 0 || b == 0) return 0;
     return (a / gcd(a, b)) * b;
 }
 
-ll ceil_div(ll a, ll b)  return a / b + (a % b > 0);
+ll ceil_div(ll a, ll b)  {return a / b + (a % b > 0);}
 
 // Binary exponentiation: a^b
 ll binpow(ll a, ll b) {
@@ -117,20 +118,22 @@ void sieve(int n) {
 }
 
 /* ---------- BIT MANIPULATION ---------- */
-bool check_bit(ll n, int k) return (n >> k) & 1LL;
-ll set_bit(ll n, int k) return n | (1LL << k);
-ll unset_bit(ll n, int k) return n & ~(1LL << k);
-ll toggle_bit(ll n, int k) return n ^ (1LL << k);
+bool check_bit(ll n, int k) {return (n >> k) & 1LL;}
+ll set_bit(ll n, int k) {return n | (1LL << k);}
+ll unset_bit(ll n, int k) {return n & ~(1LL << k);}
+ll toggle_bit(ll n, int k) {return n ^ (1LL << k);}
 
-int popcnt(int x) return __builtin_popcount((unsigned int)x);
-int popcnt(ll x) return __builtin_popcountll((ull)x);
+int popcnt(int x) {return __builtin_popcount((unsigned int)x);}
+int popcnt(ll x) {return __builtin_popcountll((ull)x);}
 
 /* ---------- VECTOR INPUT / OUTPUT ---------- */
 #define vecin(v,n) vector<ll> v(n); rep(i,n) cin >> v[i]
 #define vecout(v) for(auto &x : v) cout << x << ' '; nl;
 
-void solve() {
+void solve(){
+
     
+
 }
 signed main() {
     fastio;
